@@ -31,10 +31,10 @@ for(i in 3:9){
 par(mfrow=c(2,2))
 
 #1
-hist(mydf$Global_active_power,col="red",xlab="Global Active Power (kilowatts)",ylab="Frequency", main="Global Active Power")
+plot(x = mydf$DateTime,y=mydf$Global_active_power,xlab="",ylab="Global Active Power",type = "l")
 
 #2
-plot(x = mydf$DateTime,y=mydf$Global_active_power,xlab="",ylab="Global Active Power (kilowatts)",type = "l")
+with(mydf, plot(x = DateTime,y=Voltage,type = "l"))
 
 #3
 with(mydf,plot(x=DateTime, y=Sub_metering_1,xlab="",ylab="Energy sub metering",col="black",type="l",ylim=c(0,40)))
